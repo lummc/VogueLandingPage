@@ -867,11 +867,20 @@ body.is-modal-open {
   .hero__cta {
     justify-self: start;
   }
+.event__lead {
+    font-size: 32px !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.02em !important;
+    text-wrap: balance;
+  }
 
+  .event__lead-letter {
+    display: inline !important;
+  }
   .event__layout {
     grid-template-columns: minmax(180px, 32%) minmax(0, 1fr);
   }
-
+ 
   .guest-card--featured {
     grid-template-columns: minmax(230px, 31%) minmax(0, 1fr);
   }
