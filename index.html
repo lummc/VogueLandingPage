@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Solicita tu invitación para Diseña con Vogue, evento presencial de moda y diseño en Estancia La Candelaria, Buenos Aires."
+    />
+    <title>Diseña con Vogue</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;600&family=Montserrat:wght@200;300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/main.css" />
+  </head>
+  <body>
+    <header class="site-header" aria-label="Vogue México y Latinoamérica">
+      <a class="site-header__brand" href="#top" aria-label="Vogue México y Latinoamérica">
+        <span class="site-header__logo">VOGUE</span>
+        <span class="site-header__region">MÉXICO Y<br />LATINOAMÉRICA</span>
+      </a>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__content">
+          <p class="hero__eyebrow">LANZAMIENTO</p>
+          <h1 class="hero__title" id="hero-title">
+            <span>Diseña con</span>
+            <span>VOGUE</span>
+          </h1>
+          <p class="hero__subtitle">
+            Una tarde exclusiva donde vos seras parte de la experiencia.
+          </p>
+
+          <div class="hero__details" aria-label="Detalles del evento">
+            <div class="countdown" aria-label="Tiempo estimado restante">
+              <div class="countdown__item">
+                <span class="countdown__value">20</span>
+                <span class="countdown__label">días</span>
+              </div>
+              <div class="countdown__item">
+                <span class="countdown__value">02</span>
+                <span class="countdown__label">horas</span>
+              </div>
+              <div class="countdown__item">
+                <span class="countdown__value">41</span>
+                <span class="countdown__label">min</span>
+              </div>
+            </div>
+
+            <ul class="event-meta" aria-label="Información del evento">
+              <li class="event-meta__item">
+                <img src="./public/Pin-fill@2x.png" alt="" aria-hidden="true" />
+                <span>Estancia La Candelaria, Buenos Aires</span>
+              </li>
+              <li class="event-meta__item">
+                <img src="./public/Date-range-fill@2x.png" alt="" aria-hidden="true" />
+                <span>10 de Mayo de 2026</span>
+              </li>
+              <li class="event-meta__item">
+                <img src="./public/Message-fill@2x.png" alt="" aria-hidden="true" />
+                <span>Solicitudes en revisión</span>
+              </li>
+            </ul>
+          </div>
+
+          <button class="button button--primary hero__cta" type="button" data-scroll-target="#signup">
+            Solicitar mi lugar
+          </button>
+        </div>
+
+        <figure class="hero__media">
+          <video autoplay muted loop playsinline preload="metadata" aria-label="Pasarela editorial de Diseña con Vogue">
+            <source src="./public/d_c_e_b_b_d_dmp_.mp4" type="video/mp4" />
+          </video>
+        </figure>
+      </section>
+
+      <section class="event section" aria-labelledby="event-title">
+        <div class="section-heading">
+          <h2 id="event-title">El evento</h2>
+        </div>
+        <div class="event__layout">
+          <figure class="event__media">
+            <img
+              src="./public/eventoimg.png"
+              alt="Invitados compartiendo una experiencia de moda y diseño"
+            />
+          </figure>
+          <div class="event__content">
+            <p class="event__lead">Donde el talento argentino despega.</p>
+            <p>
+              <strong>Un grupo selecto</strong> de talentos curado por nuestro equipo será
+              elegido para participar de jornadas exclusivas, donde serán evaluados por
+              destacados diseñadores y referentes de la industria, con un solo objetivo:
+              diseñar para Vogue.
+            </p>
+            <p>
+              Buscaremos prepararlos y revelarles el camino hacia la competencia final:
+              <strong>representar a Argentina</strong> en un escenario internacional.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="activities section" aria-labelledby="activities-title">
+        <div class="section-heading">
+          <h2 id="activities-title">Actividades de moda y diseño</h2>
+        </div>
+
+        <div class="activities__carousel carousel" data-carousel data-carousel-mode="editorial" data-carousel-autoplay="3800" data-carousel-start="1" role="region" aria-roledescription="carousel" aria-label="Actividades de moda y diseño">
+          <button class="carousel__button carousel__button--prev" type="button" data-carousel-prev aria-label="Actividad anterior">
+            <span aria-hidden="true">←</span>
+          </button>
+          <div class="carousel__viewport activities__viewport">
+            <div class="carousel__track activities__track" data-carousel-track>
+              <article class="activities__card activities__card--competition" data-carousel-slide>
+                <h3>Actividades competitivas</h3>
+              </article>
+              <article class="activities__card activities__card--loreal" data-carousel-slide>
+                <h3>Puestos de L'Oréal</h3>
+              </article>
+              <article class="activities__card activities__card--talks" data-carousel-slide>
+                <h3>Charlas con diseñadores</h3>
+              </article>
+            </div>
+          </div>
+          <button class="carousel__button carousel__button--next" type="button" data-carousel-next aria-label="Actividad siguiente">
+            <span aria-hidden="true">→</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="guests section" aria-labelledby="guests-title">
+        <div class="section-heading">
+          <h2 id="guests-title">Invitados especiales</h2>
+        </div>
+
+        <article class="guest-card guest-card--featured">
+          <img
+            class="guest-card__image"
+            src="./public/image-11@2x.png"
+            alt="Retrato de Karla Martínez de Salas"
+          />
+          <div class="guest-card__content">
+            <p class="guest-card__eyebrow">Apertura oficial · Q&amp;A</p>
+            <h3>Karla Martínez de Salas</h3>
+            <p class="guest-card__role">
+              Directora ejecutiva · Vogue México y Latinoamérica
+            </p>
+            <p>
+              Una de las voces más influyentes de la moda latinoamericana actual,
+              con una trayectoria que conecta la visión editorial internacional con
+              el talento emergente de la región.
+            </p>
+            <p>
+              Q&amp;A íntimo +
+              <strong>presentación oficial del concurso y tendencias otoño 2026.</strong>
+            </p>
+          </div>
+        </article>
+
+        <div class="guest-list" aria-label="Diseñadores invitados">
+          <article class="guest-list__item guest-list__item--benito">
+            <img src="./public/image-8@2x.png" alt="Retrato de Benito Fernández" />
+            <div class="guest-list__body">
+              <h3>
+                <button class="guest-list__trigger" type="button" aria-expanded="false" aria-controls="guest-quote-benito">
+                  <span>Benito Fernández</span>
+                  <span class="guest-list__chevron" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <p class="guest-list__quote" id="guest-quote-benito">"La identidad como sello de autor"</p>
+            </div>
+          </article>
+          <article class="guest-list__item guest-list__item--santiago">
+            <img src="./public/image-10@2x.png" alt="Retrato de Santiago Artemis" />
+            <div class="guest-list__body">
+              <h3>
+                <button class="guest-list__trigger" type="button" aria-expanded="false" aria-controls="guest-quote-santiago">
+                  <span>Santiago Artemis</span>
+                  <span class="guest-list__chevron" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <p class="guest-list__quote" id="guest-quote-santiago">"Cómo destacarse en un mercado competitivo"</p>
+            </div>
+          </article>
+          <article class="guest-list__item guest-list__item--fabian">
+            <img src="./public/image-9@2x.png" alt="Retrato de Fabián Zitta" />
+            <div class="guest-list__body">
+              <h3>
+                <button class="guest-list__trigger" type="button" aria-expanded="false" aria-controls="guest-quote-fabian">
+                  <span>Fabián Zitta</span>
+                  <span class="guest-list__chevron" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <p class="guest-list__quote" id="guest-quote-fabian">"El proceso creativo detrás de una colección"</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="schedule section" aria-labelledby="schedule-title">
+        <div class="section-heading">
+          <h2 id="schedule-title">Cronograma de actividades</h2>
+        </div>
+
+        <div class="schedule__carousel carousel" data-carousel data-carousel-start="0" role="region" aria-roledescription="carousel" aria-label="Cronograma de actividades">
+          <button class="carousel__button carousel__button--prev" type="button" data-carousel-prev aria-label="Actividad anterior del cronograma">
+            <span aria-hidden="true">←</span>
+          </button>
+          <div class="carousel__viewport schedule__viewport">
+            <div class="carousel__track schedule__track" data-carousel-track>
+              <article class="schedule__item" data-carousel-slide>
+                <div>
+                  <h3>13:00hs - Apertura del evento</h3>
+                  <p>Acreditación y bienvenida general.</p>
+                </div>
+              </article>
+              <article class="schedule__item" data-carousel-slide>
+                <div>
+                  <h3>13:30hs - Primera Charla</h3>
+                  <p>Espacio donde los diseñadores argentinos comparten su experiencia.</p>
+                </div>
+              </article>
+              <article class="schedule__item" data-carousel-slide>
+                <div>
+                  <h3>15:00hs - Actividad competitiva</h3>
+                  <p>Los participantes realizan un sketching de diseño.</p>
+                </div>
+              </article>
+              <article class="schedule__item" data-carousel-slide>
+                <div>
+                  <h3>17:00hs - Segunda charla</h3>
+                  <p>Con la directora de Vogue México y Latinoamérica.</p>
+                </div>
+              </article>
+              <article class="schedule__item" data-carousel-slide>
+                <div>
+                  <h3>18:00hs - Cierre del evento</h3>
+                  <p>Agradecimientos, indicaciones sobre la siguiente etapa del concurso y despedida.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <button class="carousel__button carousel__button--next" type="button" data-carousel-next aria-label="Actividad siguiente del cronograma">
+            <span aria-hidden="true">→</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="signup section" id="signup" aria-labelledby="signup-title">
+        <div class="section-heading">
+          <h2 id="signup-title">Formulario de inscripción</h2>
+        </div>
+        <div class="signup__intro">
+          <h3>¿Preparado para solicitar tu lugar?</h3>
+          <p>Registrate para enviar tu solicitud de ingreso al evento.</p>
+        </div>
+
+        <form class="signup-form" novalidate>
+          <div class="signup-form__field">
+            <label class="signup-form__label" for="full-name">Nombre completo</label>
+            <input class="signup-form__control" id="full-name" name="fullName" type="text" autocomplete="name" required />
+          </div>
+          <div class="signup-form__field">
+            <label class="signup-form__label" for="email">Email</label>
+            <input class="signup-form__control" id="email" name="email" type="email" autocomplete="email" required />
+          </div>
+          <div class="signup-form__field">
+            <label class="signup-form__label" for="portfolio">Link a tu portfolio</label>
+            <input class="signup-form__control" id="portfolio" name="portfolio" type="url" inputmode="url" />
+          </div>
+          <div class="signup-form__field">
+            <label class="signup-form__label" for="reason">¿Por qué mereces formar parte?</label>
+            <textarea class="signup-form__control signup-form__control--textarea" id="reason" name="reason" rows="4" required></textarea>
+          </div>
+          <p class="signup-form__status" role="status" aria-live="polite"></p>
+          <button class="button button--secondary signup-form__submit" type="submit">Enviar</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__brand" aria-hidden="true">VOGUE</div>
+      <ul class="footer__social" aria-label="Redes sociales de Vogue">
+        <li>
+          <a href="https://www.facebook.com/VogueMexicoLatinoamerica/" target="_blank" rel="noopener noreferrer" aria-label="Facebook de Vogue México y Latinoamérica">
+            <img src="./public/Group-39.svg" alt="" />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/voguelatam/?hl=es" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Vogue Latinoamérica">
+            <img src="./public/Group-40.svg" alt="" />
+          </a>
+        </li>
+        <li>
+          <a href="https://x.com/voguelatam" target="_blank" rel="noopener noreferrer" aria-label="X de Vogue Latinoamérica">
+            <img src="./public/Group-41@2x.png" alt="" />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/channel/UCLBMjQDJ5r8kbTrN1kev4dw" target="_blank" rel="noopener noreferrer" aria-label="YouTube de Vogue Latinoamérica">
+            <img src="./public/Group-42.svg" alt="" />
+          </a>
+        </li>
+        <li>
+          <a href="https://ar.pinterest.com/voguelatam/" target="_blank" rel="noopener noreferrer" aria-label="Pinterest de Vogue Latinoamérica">
+            <img src="./public/Group-43.svg" alt="" />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.tiktok.com/@voguelatam" target="_blank" rel="noopener noreferrer" aria-label="TikTok de Vogue Latinoamérica">
+            <img src="./public/Group-44.svg" alt="" />
+          </a>
+        </li>
+      </ul>
+    </footer>
+
+    <div class="signup-modal" data-signup-modal hidden>
+      <div class="signup-modal__overlay" aria-hidden="true"></div>
+      <div
+        class="signup-modal__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="signup-modal-title"
+        tabindex="-1"
+      >
+        <button class="signup-modal__close" type="button" data-signup-modal-close aria-label="Cerrar mensaje">
+          <span aria-hidden="true">×</span>
+        </button>
+        <h2 class="signup-modal__title" id="signup-modal-title">
+          ¡Gracias por inscribirte, <span data-signup-modal-name></span>!
+        </h2>
+        <p class="signup-modal__text">
+          Próximamente nos pondremos en contacto a:<br />
+          <span data-signup-modal-email></span>
+        </p>
+      </div>
+    </div>
+
+    <script src="./scripts/main.js"></script>
+  </body>
+</html>

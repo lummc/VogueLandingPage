@@ -1,0 +1,73 @@
+@use "../abstracts/variables" as *;
+
+body.is-modal-open {
+  overflow: hidden;
+}
+
+.signup-modal[hidden] {
+  display: none;
+}
+
+.signup-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.signup-modal__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.38);
+  backdrop-filter: blur(7px);
+}
+
+.signup-modal__dialog {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 520px);
+  min-height: 260px;
+  display: grid;
+  align-content: center;
+  gap: 22px;
+  padding: clamp(42px, 7vw, 64px) clamp(28px, 6vw, 58px);
+  background: $color-white;
+  box-shadow: $shadow-editorial;
+  color: $color-black;
+  text-align: center;
+}
+
+.signup-modal__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  border: 0;
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  background: transparent;
+  color: $color-black;
+  font-size: 1.7rem;
+  line-height: 1;
+}
+
+.signup-modal__title {
+  font-family: $font-serif;
+  font-size: clamp(1.7rem, 5vw, 2.6rem);
+  font-weight: 600;
+  line-height: 1.02;
+  text-transform: none;
+}
+
+.signup-modal__text {
+  font-size: clamp(0.92rem, 2.2vw, 1.08rem);
+  font-weight: 300;
+}
+
+.signup-modal__text span {
+  color: $color-accent;
+  font-weight: 500;
+}

@@ -1,0 +1,211 @@
+@use "../abstracts/variables" as *;
+
+.guest-card--featured {
+  display: grid;
+  grid-template-columns: minmax(96px, 36%) minmax(0, 1fr);
+  gap: clamp(16px, 5vw, 64px);
+  align-items: center;
+  margin-bottom: clamp(20px, 5vw, 54px);
+}
+
+.guest-card__image {
+  width: 100%;
+  aspect-ratio: 0.92 / 1;
+  object-fit: cover;
+  box-shadow: $shadow-editorial;
+}
+
+.guest-card__content {
+  display: grid;
+  gap: 0.45rem;
+  font-size: clamp(0.52rem, 1.6vw, 0.78rem);
+  font-weight: 200;
+}
+
+.guest-card__eyebrow {
+  color: #333;
+  font-family: $font-sans;
+  font-size: clamp(1.05rem, 4.6vw, 2.7rem);
+  font-weight: 300;
+  line-height: 1;
+}
+
+.guest-card__role,
+.guest-card__content h3 {
+  color: $color-accent-soft;
+  font-size: clamp(0.72rem, 1.7vw, 1rem);
+  font-weight: 600;
+}
+
+.guest-list {
+  display: grid;
+  gap: 14px;
+}
+
+.guest-list__item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 100px minmax(0, 1fr);
+  align-items: stretch;
+  min-height: 100px;
+  background: $color-black;
+  color: $color-white;
+  overflow: hidden;
+  box-shadow: $shadow-editorial;
+
+  img {
+    width: 100px;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  h3 {
+    margin: 0;
+  }
+}
+
+.guest-list__body {
+  display: grid;
+  align-content: center;
+}
+
+.guest-list__trigger {
+  border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 100px;
+  padding: 0 22px 0 24px;
+  background: transparent;
+  color: $color-white;
+  font-size: clamp(0.9rem, 3.8vw, 1.05rem);
+  font-weight: 400;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.guest-list__chevron {
+  width: 10px;
+  height: 10px;
+  border-right: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  transform: rotate(45deg);
+  transition: transform 220ms ease;
+}
+
+.guest-list__trigger[aria-expanded="true"] .guest-list__chevron {
+  transform: rotate(225deg);
+}
+
+.guest-list__quote {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0 22px 0 24px;
+  color: $color-white;
+  font-size: 0.86rem;
+  font-weight: 300;
+  line-height: 1.25;
+  transition: max-height 260ms ease, opacity 220ms ease, padding 260ms ease;
+}
+
+.guest-list__item.is-expanded .guest-list__quote {
+  max-height: 120px;
+  opacity: 1;
+  padding-bottom: 18px;
+}
+
+@media (min-width: $tablet) {
+  .guest-card--featured {
+    grid-template-columns: minmax(230px, 31%) minmax(0, 1fr);
+  }
+
+  .guest-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .guest-list__item {
+    display: grid;
+    grid-template-columns: 1fr;
+    min-height: 0;
+    border: 12px solid $color-black;
+
+    img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1.45 / 1;
+      filter: grayscale(1);
+      transition: opacity 260ms ease, transform 320ms ease;
+    }
+  }
+
+  .guest-list__body {
+    position: static;
+    display: block;
+  }
+
+  .guest-list__trigger {
+    min-height: auto;
+    justify-content: center;
+    padding: 9px 4px 0;
+    color: $color-warm;
+    font-size: 0.72rem;
+    pointer-events: none;
+    text-align: center;
+  }
+
+  .guest-list__chevron {
+    display: none;
+  }
+
+  .guest-list__quote {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    max-height: none;
+    padding: 26px 24px 46px;
+    background: $color-black;
+    color: $color-white;
+    font-size: clamp(1.05rem, 2.2vw, 1.65rem);
+    line-height: 1.18;
+    opacity: 0;
+    text-align: center;
+    transform: translateX(18px);
+    transition: opacity 260ms ease, transform 320ms ease;
+  }
+
+  .guest-list__item:hover img,
+  .guest-list__item:focus-within img {
+    opacity: 0;
+    transform: translateX(-16px);
+  }
+
+  .guest-list__item:hover .guest-list__quote,
+  .guest-list__item:focus-within .guest-list__quote {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .guest-list__item:hover .guest-list__trigger,
+  .guest-list__item:focus-within .guest-list__trigger {
+    position: absolute;
+    right: 24px;
+    bottom: 14px;
+    z-index: 2;
+    width: 42%;
+    justify-content: center;
+    padding: 0;
+    color: $color-warm;
+    font-size: clamp(1rem, 1.8vw, 1.25rem);
+  }
+
+  .guest-list__item--fabian {
+    order: 2;
+  }
+
+  .guest-list__item--santiago {
+    order: 3;
+  }
+}

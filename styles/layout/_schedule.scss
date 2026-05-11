@@ -1,0 +1,85 @@
+@use "../abstracts/variables" as *;
+
+.schedule__carousel {
+  width: min(100%, 720px);
+  margin-inline: auto;
+}
+
+.schedule__viewport {
+  padding-block: 10px;
+}
+
+.schedule__track {
+  gap: 24px;
+}
+
+.schedule__item {
+  flex: 0 0 min(100%, 620px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 92px;
+  gap: 24px;
+  background: $color-black;
+  box-shadow: $shadow-editorial;
+  color: $color-white;
+  padding: 24px 74px;
+  opacity: 0.55;
+  transform: scale(0.94);
+  transition: opacity 320ms ease, transform 320ms ease;
+
+  h3 {
+    margin-bottom: 4px;
+    font-size: clamp(1.15rem, 2.8vw, 1.65rem);
+    font-weight: 300;
+  }
+
+  p {
+    color: $color-warm;
+    font-size: clamp(0.72rem, 1.6vw, 0.86rem);
+    font-weight: 300;
+    line-height: 1.08;
+  }
+}
+
+.schedule__item.is-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.schedule__carousel .carousel__button {
+  width: 42px;
+  height: 42px;
+  border-radius: 0;
+  color: $color-warm;
+  background: transparent;
+  font-size: 1.55rem;
+}
+
+.schedule__carousel .carousel__button--prev {
+  left: max(8px, calc((100% - min(100%, 620px)) / 2 + 12px));
+}
+
+.schedule__carousel .carousel__button--next {
+  right: max(8px, calc((100% - min(100%, 620px)) / 2 + 12px));
+}
+
+@media (min-width: $desktop) {
+  .schedule__carousel {
+    width: min(100%, 900px);
+  }
+
+  .schedule__item {
+    flex-basis: 850px;
+    min-height: 140px;
+    padding: 38px 92px;
+  }
+
+  .schedule__carousel .carousel__button--prev {
+    left: calc((100% - 850px) / 2 + 18px);
+  }
+
+  .schedule__carousel .carousel__button--next {
+    right: calc((100% - 850px) / 2 + 18px);
+  }
+}

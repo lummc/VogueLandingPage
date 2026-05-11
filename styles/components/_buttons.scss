@@ -1,0 +1,30 @@
+@use "../abstracts/variables" as *;
+
+.button {
+  border: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 0.85rem 1.8rem;
+  color: $color-white;
+  background: $color-accent;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  transition: background-color 160ms ease, transform 160ms ease;
+
+  &:hover {
+    background: $color-accent-soft;
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+.button--secondary {
+  min-width: 92px;
+  padding-inline: 1.45rem;
+}

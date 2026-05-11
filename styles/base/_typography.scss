@@ -1,0 +1,24 @@
+@use "../abstracts/variables" as *;
+
+h1,
+h2,
+h3 {
+  font-weight: 500;
+  line-height: 1.05;
+}
+
+h1,
+.site-header__logo,
+.footer__brand {
+  font-family: $font-serif;
+}
+
+h2 {
+  font-size: clamp(1rem, 2.6vw, 2rem);
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: clamp(0.95rem, 2vw, 1.45rem);
+}

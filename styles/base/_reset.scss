@@ -1,0 +1,39 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+figure,
+ul {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}

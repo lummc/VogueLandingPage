@@ -1,0 +1,29 @@
+@use "../abstracts/variables" as *;
+
+body {
+  min-width: 320px;
+  background: $color-white;
+  color: $color-black;
+  font-family: $font-sans;
+  line-height: 1.4;
+}
+
+main {
+  overflow: hidden;
+}
+
+.section {
+  width: min(100% - 32px, $container);
+  margin-inline: auto;
+  padding-block: clamp(28px, 7vw, 72px);
+}
+
+:focus-visible {
+  outline: 2px solid $color-accent;
+  outline-offset: 4px;
+}
+
+strong {
+  color: $color-accent;
+  font-weight: 500;
+}
